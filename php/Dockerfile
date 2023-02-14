@@ -1,7 +1,16 @@
-FROM php:7.4-apache
+# install php-apache image
+FROM php:8.1-fpm-alpine
 
+# install composer
+RUN curl -sS https://getcomposer.org/installer | php
+RUN mv composer.phar /usr/local/bin/composer
+
+# install packages
+RUN apk update
+RUN apk add git nodejs npm
+
+# copy php.ini
 COPY php.ini /usr/local/etc/php/
 
-RUN apt-get update && apt-get install -y libonig-dev && \
-
-docker-php-ext-install pdo_mysql mysqli mbstring
+# install php extensions
+RUN docker-php-ext-install pdo pdo_mysql

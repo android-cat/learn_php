@@ -4,36 +4,46 @@ services:
   #MySQL用コンテナ
   mysql:
     container_name: mysql
-    image: mysql:5.7
+    build: ./mysql
     volumes:
-      - ./mysql:/var/lib/mysq
+     # - ./mysql/my.cnf:/etc/mysql/my.cnf
+      - mysql-volume:/var/lib/mysql
     ports:
       - 3306:3306
     environment:
-      - MYSQL_ROOT_PASSWORD=root
-      - MYSQL_DATABASE=test
+      - MYSQL_DATABASE=php_db
+      - MYSQL_ROOT_PASSWORD=rootpassword
       - MYSQL_USER=test
-      - MYSQL_PASSWORD=test
-
-  #phpMyAdmin用コンテナ
-  phpmyadmin:
-    container_name: phpMyAdmin
-    depends_on:
-      - mysql
-    image: phpmyadmin/phpmyadmin
-    environment:
-      PMA_HOST: mysql
-    restart: always
+      - MYSQL_PASSWORD=password
+  #nginx用コンテナ
+  nginx:
+    container_name: nginx
+    build: ./nginx
     ports:
-      - "80:80"
+      - "8080:80"
+    volumes:
+      - ./nginx/default.conf:/etc/nginx/conf.d/default.conf
+      - ./src:/usr/share/nginx/html
 
   #php用コンテナ
   php:
-    container_name: php-apache
+    container_name: php-fpm
     build: ./php
     volumes:
-      - ./HTML:/var/www/html
-    ports:
-      - 8080:80
+      - ./php/php.ini:/usr/local/php/php.ini
+      - ./src:/var/www/html
     depends_on:
       - mysql
+
+#phpMyAdmin用コンテナ
+  phpmyadmin:
+    container_name: phpMyAdmin
+    image: phpmyadmin/phpmyadmin
+    ports:
+      - "8081:80"
+    environment:
+      - PMA_ARBITRARY=1
+      - PMA_HOST=mysql
+      - PMA_ROOT_PASSWORD=rootpassword
+volumes:
+  mysql-volume:

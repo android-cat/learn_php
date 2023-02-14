@@ -3249,15 +3249,15 @@ function withinMaxClamp(min, value, max) {
 
 /***/ }),
 
-/***/ "./resources/js/app.tsx":
+/***/ "./resources/js/app.jsx":
 /*!******************************!*\
-  !*** ./resources/js/app.tsx ***!
+  !*** ./resources/js/app.jsx ***!
   \******************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _bootstrap__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
+/* harmony import */ var _js_bootstrap__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../js/bootstrap */ "./resources/js/bootstrap.js");
 /* harmony import */ var _css_app_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../css/app.css */ "./resources/css/app.css");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_2__);
@@ -3267,7 +3267,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var App = function App() {
-  var title = "Laravel 9 Mix with TypeScript React !!";
+  var title = "Laravel 9 Vite with TypeScript React !!";
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default().createElement("h1", null, title);
 };
 var container = document.getElementById('app');
@@ -65812,7 +65812,7 @@ const toJSONObject = (obj) => {
 /******/ 		// undefined = chunk not loaded, null = chunk preloaded/prefetched
 /******/ 		// [resolve, reject, Promise] = chunk loading, 0 = chunk loaded
 /******/ 		var installedChunks = {
-/******/ 			"/js/app": 0,
+/******/ 			"/jsx/app": 0,
 /******/ 			"css/app": 0
 /******/ 		};
 /******/ 		
@@ -65868,7 +65868,7 @@ const toJSONObject = (obj) => {
 /******/ 	// startup
 /******/ 	// Load entry module and return exports
 /******/ 	// This entry module depends on other loaded chunks and execution need to be delayed
-/******/ 	__webpack_require__.O(undefined, ["css/app"], () => (__webpack_require__("./resources/js/app.tsx")))
+/******/ 	__webpack_require__.O(undefined, ["css/app"], () => (__webpack_require__("./resources/js/app.jsx")))
 /******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["css/app"], () => (__webpack_require__("./resources/sass/app.scss")))
 /******/ 	__webpack_exports__ = __webpack_require__.O(__webpack_exports__);
 /******/ 	

@@ -3266,7 +3266,7 @@ __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 __webpack_require__(/*! ../css/app.css */ "./resources/css/app.css");
 var client_1 = __webpack_require__(/*! react-dom/client */ "./node_modules/react-dom/client.js");
 var App = function App() {
-  var title = "Laravel 9 Mix with TypeScript React !!";
+  var title = "Laravel 8 Mix with TypeScript React !!";
   return (0, jsx_runtime_1.jsx)("h1", {
     children: title
   });

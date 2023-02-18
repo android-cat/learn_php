@@ -10819,3 +10819,55 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
+header {
+  background-color: lightskyblue;
+  margin-bottom: 50px;
+}
+
+.logo {
+  margin: 10px 0 0 50px;
+  float: left;
+  width: 40px;
+}
+
+ul.list {
+  color: white;
+  display: flex;
+  justify-content: flex-end;
+  list-style: none;
+}
+
+li {
+  padding: 0 10px;
+  margin-top: 30px;
+}
+li:hover {
+  background-color: rgb(200, 234, 255);
+}
+
+.MuiPopover-paper {
+  background-color: rgb(72, 109, 132) !important;
+}
+
+ul.poplist {
+  list-style: none;
+}
+
+a {
+  text-decoration: none !important;
+}
+a:visited {
+  color: white;
+}
+a:hover {
+  color: gray !important;
+}
+
+.icon {
+  position: relative;
+  transform: translateY(-50%);
+  width: 40px;
+}
+.icon:hover {
+  background-color: rgb(200, 234, 255) !important;
+}

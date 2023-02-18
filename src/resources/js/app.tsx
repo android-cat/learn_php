@@ -1,5 +1,4 @@
 import "./bootstrap";
-import "../css/app.css";
 import { HashRouter as Router, Route, Switch } from "react-router-dom";
 
 import GameListPage from "./components/pages/GameListPage";
@@ -16,7 +15,7 @@ const App = () => {
         {/* 積みゲー一覧画面 */}
         <Route path="/gamelist" component={GameListPage} exact />
         {/* フォロー一覧画面 */}
-        <Route path="/friend"component={FollowPage} exact/>
+        <Route path="/follow"component={FollowPage} exact/>
         {/* エラー画面 */}
         <Route component={ErrorPage} exact />
       </Switch>

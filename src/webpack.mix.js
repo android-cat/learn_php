@@ -20,4 +20,5 @@ const mix = require('laravel-mix');
             '*': 'http://localhost:8080'
         }
     }
-});
+}).version()
+.sourceMaps();

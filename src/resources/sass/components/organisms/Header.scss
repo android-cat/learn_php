@@ -1,11 +1,14 @@
 header{
     background-color:lightskyblue;
-    margin-bottom: 50px;
+    margin-bottom: 40px;
 }
 .logo{
     margin:10px 0 0 50px;
     float:left;
-    width: 40px;
+    width: 43px;
+    &:hover {
+        background-color:rgb(200, 234, 255) !important;
+    }
 }
 ul.list {
     color:white;
@@ -26,6 +29,7 @@ li {
 }
 ul.poplist{
     list-style: none;
+    transform: translateX(-12%);
 }
 a{
     text-decoration: none!important;
@@ -39,7 +43,7 @@ a{
 .icon{
     position: relative;
     transform: translateY(-50%);
-    width: 40px;
+    width: 43px;
     &:hover {
         background-color:rgb(200, 234, 255) !important;
     }

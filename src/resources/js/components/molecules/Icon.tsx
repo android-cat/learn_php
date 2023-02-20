@@ -2,6 +2,10 @@ import { useState,useRef} from 'react';
 import { Popover,  } from '@mui/material';
 import { makeStyles,createStyles,Theme } from '@material-ui/core/styles';
 
+import SettingsIcon from '@mui/icons-material/Settings';
+import AccountBoxIcon from '@mui/icons-material/AccountBox';
+import LogoutIcon from '@mui/icons-material/Logout';
+
 import { NavLink } from "react-router-dom";
 
 const useStyles = makeStyles((theme: Theme) =>
@@ -38,17 +42,17 @@ const Icon = (props: Props) => {
             <ul className="poplist">
                     <li>
                         <NavLink exact to="/">
-                            Home
+                        <AccountBoxIcon/>&nbsp; Myprofile
                         </NavLink>
                     </li>
                     <li>
                         <NavLink exact to="/follow">
-                            Follow
+                         <SettingsIcon/>&nbsp; Settings
                         </NavLink>
                     </li>
                     <li>
                         <NavLink exact to="/gamelist">
-                            GameList
+                            <LogoutIcon/>&nbsp; Signout 
                         </NavLink>
                     </li>
             </ul>

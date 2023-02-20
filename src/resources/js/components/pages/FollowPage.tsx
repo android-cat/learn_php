@@ -1,10 +1,7 @@
-import Header from "../organisms/Header"
+import GenericTemplate from "../templates/GenericTemplate";
 const FollowPage = () => {
-    return (
-      <div>
-        <Header imageUrl="icon(仮).svg"/>
-        <h1>Followtest</h1>
-      </div>
+  return (
+      <GenericTemplate pagename="FollowPage"/>
     )
   };
   

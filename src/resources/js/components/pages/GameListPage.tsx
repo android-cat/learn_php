@@ -1,10 +1,7 @@
-import Header from "../organisms/Header"
+import GenericTemplate from "../templates/GenericTemplate";
 const GameListPage = () => {
     return (
-      <div>
-        <Header imageUrl="icon(仮).svg"/>
-        <h1>GameListtest</h1>
-      </div>
+      <GenericTemplate pagename="GameListPage"/>
     )
   };
   

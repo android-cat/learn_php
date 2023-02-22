@@ -21,7 +21,7 @@ const App = () => {
         {/* プロフィール画面 */}
         <Route path="/profile"component={ProfilePage} exact/>
         {/* 設定画面 */}
-        <Route path="/profile"component={SettingsPage} exact/>
+        <Route path="/settings"component={SettingsPage} exact/>
         {/* エラー画面 */}
         <Route component={ErrorPage} exact />
       </Switch>

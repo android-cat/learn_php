@@ -2,13 +2,13 @@ import Image from "../atoms/Image";
 import Icon from "../molecules/Icon";
 import { NavLink } from "react-router-dom";
 import * as colors from "@material-ui/core/colors";
-
+// パラメータ定義
 type Props = {
     imageUrl: string;
   };
-
+// ヘッダー部の表示
 const Header = (props: Props) => {
-
+// ヘッダーメニューの選択時のスタイル定義
     const current={
         color: colors.grey[600],
         width: '100%',
@@ -17,11 +17,13 @@ const Header = (props: Props) => {
 
     return (
         <header>
+            {/* サイトロゴの表示並びに画面遷移埋め込み */}
             <NavLink exact to="/">
                 <div className="logo">
                     <Image imageUrl={props.imageUrl}/>
                 </div>
             </NavLink>
+            {/* ヘッダーメニュー */}
             <div className="list-menu">
                 <ul className="list">
                     <li>
@@ -40,6 +42,7 @@ const Header = (props: Props) => {
                         </NavLink>
                     </li>
                     <li>
+                        {/* 本来はユーザーアイコンだが仮画像URL挿入 */}
                         <div className="icon">
                             <Icon imageUrl={props.imageUrl}/>
                         </div>

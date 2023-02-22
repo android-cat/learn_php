@@ -1,7 +1,10 @@
+import Copyright from "../atoms/Copyright";
+// フッター部の表示
 const Footer = () => {
     return (
         <footer className="footer">
-            <h1>footertest</h1>
+            {/* コピーライトの表示 */}
+            <Copyright />
         </footer>
     )
   };

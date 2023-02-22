@@ -1,7 +1,9 @@
-header{
+//  ヘッダー全体のタグ
+ header{
     background-color:lightskyblue;
     margin-bottom: 40px;
 }
+// ヘッダーロゴのCSS
 .logo{
     margin:10px 0 0 50px;
     float:left;
@@ -10,6 +12,7 @@ header{
         background-color:rgb(200, 234, 255) !important;
     }
 }
+// ヘッダーメニューのCSS
 ul.list {
     color:white;
     display:flex;
@@ -17,6 +20,7 @@ ul.list {
     list-style: none;
     
 }
+//メニュー要素のCSS
 li {
     padding: 0 10px;
     margin-top:30px;
@@ -24,13 +28,16 @@ li {
         background-color:rgb(200, 234, 255);
     }
 }
+// フロートメニューのCSS
 .MuiPopover-paper{ 
     background-color:rgb(72, 109, 132)!important;
 }
+// フロートメニューのCSS
 ul.poplist{
     list-style: none;
     transform: translateX(-12%);
 }
+// 遷移タグのCSS
 a{
     text-decoration: none!important;
     &:visited{
@@ -40,6 +47,7 @@ a{
         color:gray !important;
     }
 }
+// ユーザーのアイコンのCSS
 .icon{
     position: relative;
     transform: translateY(-50%);

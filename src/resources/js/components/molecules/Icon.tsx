@@ -1,57 +1,53 @@
 import { useState,useRef} from 'react';
 import { Popover,  } from '@mui/material';
-import { makeStyles,createStyles,Theme } from '@material-ui/core/styles';
-
 import SettingsIcon from '@mui/icons-material/Settings';
 import AccountBoxIcon from '@mui/icons-material/AccountBox';
 import LogoutIcon from '@mui/icons-material/Logout';
 
 import { NavLink } from "react-router-dom";
 
-const useStyles = makeStyles((theme: Theme) =>
-    createStyles({
-        popover: {
-            backgroundColor: 'green'
-        }
-    })
-);
-
+// パラメータ定義
 type Props = {
     imageUrl: string;
 };
 
 const Icon = (props: Props) => {
+    // メニューの状態の保持のための変数を宣言
     const [open, setOpen] = useState(false);
-    const divRef:any = useRef();
-    
-    const styles=useStyles();
+    // 実画像URLの生成
     const url:string ="/images/"+props.imageUrl;
     
     return (
       <div>
+        {/* 画像が押されたら論理値を反転する */}
         <img src={url} onClick={() => setOpen(!open)} />
         <Popover
+            // openの論理値によって開くか決める
             open={open}
-            anchorEl={divRef.current}
+            // フロートメニューが開かれている場合、押されたら論理値を反転
             onClose={() => setOpen(!open)}
+            // 画像に被せる形で表示
             anchorOrigin={{
                 vertical: 'top',
                 horizontal: 'right',
             }}
+
         >
+            {/* 実際の開くメニュー */}
             <ul className="poplist">
                     <li>
-                        <NavLink exact to="/">
+                        <NavLink exact to="/profile">
                         <AccountBoxIcon/>&nbsp; Myprofile
                         </NavLink>
                     </li>
                     <li>
-                        <NavLink exact to="/follow">
+                        <NavLink exact to="/settings">
                          <SettingsIcon/>&nbsp; Settings
                         </NavLink>
                     </li>
                     <li>
-                        <NavLink exact to="/gamelist">
+                        {/* 使用未確定につきホームを仮値に */}
+                        <NavLink exact to="/">
                             <LogoutIcon/>&nbsp; Signout 
                         </NavLink>
                     </li>
@@ -61,4 +57,4 @@ const Icon = (props: Props) => {
     )
   }
   
-  export default Icon
+  export default Icon;

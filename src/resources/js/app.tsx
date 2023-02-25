@@ -1,5 +1,5 @@
 import "./bootstrap";
-import { HashRouter as Router, Route, Switch } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 import GameListPage from "./components/pages/GameListPage";
 import TLPage from "./components/pages/TLPage";
